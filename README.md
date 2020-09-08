@@ -16,8 +16,8 @@ function doGet(e) {
     result = 'No Parameters';
   }
   else {
-    var sheet_id = '1rA5EDdfREszBmyYEc1LO4p7l4FE-GKbduQb1CdhhC6A'; 		       // Spreadsheet ID
-    var sheet = SpreadsheetApp.openById(sheet_id).getSheetByName('TestData');  // get Active sheet
+    var sheet_id = 'SHEET_ID'; // TODO put sheet_ID
+    var sheet = SpreadsheetApp.openById(sheet_id).getSheetByName('SHEET_NAME');  // TODO put sheet name
     var newRow = sheet.getLastRow() + 1;						
     var rowData = [];
     rowData[0] = new Date();  // Timestamp in column A
@@ -50,7 +50,7 @@ function stripQuotes( value ) {
   return value.replace(/^["']|['"]$/g, "");
 }
 ```  
-4. Edit the fields with the sheet_ID and sheet_name with the appropiate values.  
+4. Replace the fields `SHEET_ID` and `SHEET_NAME` with the appropiate values.  
 5. `Publish` to `web app`  
 5. Grab the script_ID for the arduino code.  
 
