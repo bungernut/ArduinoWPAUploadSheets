@@ -52,7 +52,9 @@ function stripQuotes( value ) {
 ```  
 4. Replace the fields `SHEET_ID` and `SHEET_NAME` with the appropiate values.  
 5. `Publish` to `web app`  
-5. Grab the script_ID for the arduino code.  
+6. Test the script with the web_browser. So go to the current web app URL, and add `?temperature=21&humidity=21` to the end of the URL before pressing enter.
+7. Save the script_ID for the arduino code.
+
 
 **Setup the ESP8266**  
 1. Clone this repo to your computer.  
