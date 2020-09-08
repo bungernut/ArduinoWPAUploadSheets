@@ -1,10 +1,10 @@
 # ArduinoWPAUploadSheets
 
-Upload data to Google Sheets using the g-script thing.  
+Upload data with an ESP8266 to Google Sheets using the g-script thing, and then pull it down in a jupyter-notebook  
 
-***This works with a ESP8266 NodeMCU board right now...***
+### This works with a ESP8266 NodeMCU board right now...
 
-**Setup G-Script**
+## Setup G-Script
 1. Make a new google sheet.
 2. got to `Tools`>`Script Editor`
 3. Paste in the following g-script (slightly modified from sources below):
@@ -56,7 +56,7 @@ function stripQuotes( value ) {
 7. Save the script_ID for the arduino code.
 
 
-**Setup the ESP8266**  
+## Setup the ESP8266  
 1. Clone this repo to your computer.  
 2. Make a new file in `LogDataSheets/` and fill in the fields. This file is included in .gitignore so your secrets should be safe if you try to commit.
 ```
@@ -66,7 +66,7 @@ function stripQuotes( value ) {
 ```
 3. Upload to ESP8266, and watch data hopefully be uploaded to your sheet.
 
-** Download data from Google Sheet with Python **
+## Download data from Google Sheet with Python  
 1. Enable API for sheets, I made desktop-app and download the client configuration.json file. https://developers.google.com/sheets/api/quickstart/python  
 2. Use `conda install -c conda-forge google-api-python-client` rather than use PIP to install it.
 3. Copy the json file to this folder. It is also added to `.gitignore` to prevent you from uploading it.
