@@ -66,6 +66,14 @@ function stripQuotes( value ) {
 ```
 3. Upload to ESP8266, and watch data hopefully be uploaded to your sheet.
 
+** Download data from Google Sheet with Python **
+1. Enable API for sheets, I made desktop-app and download the client configuration.json file. https://developers.google.com/sheets/api/quickstart/python  
+2. Use `conda install -c conda-forge google-api-python-client` rather than use PIP to install it.
+3. Copy the json file to this folder. It is also added to `.gitignore` to prevent you from uploading it.
+4. Run jupyter notebook, and start executing cells. It should open another webbrowser asking if you want to give access to the sheet. If successful this should make a token.pickle to save the authorization whatevers. 
+5. I needed to change the displayed format for the number in the sheet in the actual sheet, for example the dats needs to show all the data: YmdHMS. 
+6. Run the jupyter-notebook.
+
 **TODO:**
 Nano 33 IoT uses WiFiNINA libs to connect to WiFi.  
 Example `ConnectWithWPA` is a good start with this, said needed firmware update, but still managed to connect.   
