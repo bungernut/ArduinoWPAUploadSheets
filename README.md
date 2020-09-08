@@ -9,9 +9,6 @@ Upload data to Google Sheets using the g-script thing.
 2. got to `Tools`>`Script Editor`
 3. Paste in the following g-script (slightly modified from sources below):
 ```
-* Function doGet: Parse received data from GET request, 
-  get and store data which is corresponding with header row in Google Spreadsheet
-*/
 function doGet(e) { 
   Logger.log( JSON.stringify(e) );  // view parameters
   var result = 'Ok'; // assume success
