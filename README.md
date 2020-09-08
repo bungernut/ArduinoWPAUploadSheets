@@ -58,13 +58,14 @@ function stripQuotes( value ) {
 
 ## Setup the ESP8266  
 1. Clone this repo to your computer.  
-2. Make a new file in `LogDataSheets/` and fill in the fields. This file is included in .gitignore so your secrets should be safe if you try to commit.
+2. Open the Arduino file in `LogDataSheets`. This is the program you will need to upload to the ESP8266. You will notice on the first line `#include "WPA_secrets.h"` that we import a file to save your WiFi and google-sheet secrets. 
+3. You will need to make a new file in the same folder that corresponds to this file: `#include "WPA_secrets.h"`. That means make a new `WPA_secrets.h` file (careful it's not a txt or other wrong file type). Copy the following three lines and fill in the fields in that file. This file is included in .gitignore so your secrets should be safe if you try to commit.
 ```
 #define SECRET_SSID ""
 #define SECRET_PASS ""
 #define SECRET_GSCRIPT_ID ""
 ```
-3. Upload to ESP8266, and watch data hopefully be uploaded to your sheet.
+4. Upload to ESP8266, and watch data hopefully be uploaded to your sheet.
 
 ## Download data from Google Sheet with Python  
 1. Enable API for sheets, I made desktop-app and download the client configuration.json file. https://developers.google.com/sheets/api/quickstart/python  
@@ -74,7 +75,7 @@ function stripQuotes( value ) {
 5. I needed to change the displayed format for the number in the sheet in the actual sheet, for example the dats needs to show all the data: YmdHMS. 
 6. Run the jupyter-notebook.
 
-**TODO:**
+## TODO:
 Nano 33 IoT uses WiFiNINA libs to connect to WiFi.  
 Example `ConnectWithWPA` is a good start with this, said needed firmware update, but still managed to connect.   
 
